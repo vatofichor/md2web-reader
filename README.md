@@ -2,6 +2,8 @@
 
 A lightweight, responsive standalone document viewer for Markdown and Plain Text files, compiled with the md2web compiler engine. Designed with retro-modern aesthetics, featuring Slate Dark and Cream Light themes.
 
+[In the style of simple-course-explorer](https://github.com/vatofichor/simple-course-explorer)
+
 ---
 
 ## Features
