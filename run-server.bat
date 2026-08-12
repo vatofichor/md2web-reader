@@ -1,7 +1,7 @@
 @echo off
 rem Copyright (c) 2026:
 rem vatofichor - Sebastian Mass     [>_<]
-rem & Assisted By Gemini Antigravity /|\
+rem and Assisted By Gemini Antigravity /|\
 rem Licensed under the MIT License. See LICENSE in the project root.
 
 echo ========================================================
