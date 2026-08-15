@@ -1,6 +1,8 @@
-# md2web Standalone Reader
+# md2web Standalone Reader — Release 1.5
 
 A lightweight, responsive standalone document viewer for Markdown and Plain Text files, compiled with the md2web compiler engine. Designed with retro-modern aesthetics, featuring Slate Dark and Cream Light themes.
+
+**Current Version**: `v1.5.6` (Release 1.5)
 
 ---
 
