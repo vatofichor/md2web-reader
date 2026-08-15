@@ -2,8 +2,6 @@
 
 A lightweight, responsive standalone document viewer for Markdown and Plain Text files, compiled with the md2web compiler engine. Designed with retro-modern aesthetics, featuring Slate Dark and Cream Light themes.
 
-[In the style of simple-course-explorer](https://github.com/vatofichor/simple-course-explorer)
-
 ---
 
 ## Features
@@ -15,30 +13,36 @@ A lightweight, responsive standalone document viewer for Markdown and Plain Text
 
 ---
 
-## Installation & Server Launch
+## Installation, Server Launch & Utilities
 
 ### 1. Requirements
-- PHP 7.4 or higher installed.
+- PHP 7.4 or higher installed (or run `install.bat` on Windows to unpack bundled PHP 8.5 runtime).
 
-### 2. Launch Local Server (Windows)
-Double-click the `run-server.bat` file in the root folder.
-This script checks your local PATH environment variable for PHP, and automatically fires up a local web server at:
-[http://localhost:8080](http://localhost:8080)
+### 2. Environment Installation & Deployment
+- **Windows**: Run `install.bat` in the project root to extract bundled PHP to `lib/php/` and deploy launcher scripts.
+- **Linux / macOS**: Run `./install.sh` to verify system PHP CLI dependencies and deploy launcher scripts.
 
-### 3. Launch Local Server (Manual / Unix / macOS)
-Open a terminal in the project root directory and execute:
-```bash
-php -S localhost:8080 index.php
-```
+### 3. Launching Local Web Server
+- **Windows**: Double-click `run-server.bat`, `md2web.bat`, or `md2reader.bat` in the root folder.
+- **Linux / macOS**: Execute `./run-server.sh`, `./md2web`, or `./md2reader`.
+- **Manual Launch**: Run `php -S localhost:8080 index.php` in project root.
 
-### 4. Deploying to Apache / LAMP Subdirectories
-Simply upload the project folder to your server. The relative configurations in the root and public `.htaccess` files automatically map request URIs and assets securely without needing manual config edits.
+Server will be accessible at: [http://localhost:8080](http://localhost:8080)
+
+### 4. Windows PATH Registration Utility
+To launch the reader from any terminal window using `md2web` or `md2reader`:
+- Execute `dev\admin_scripts\add_to_path.bat`. This registers the project root in your Windows User `PATH` (no Admin/UAC elevation required).
+
+### 5. Uninstallation & Cleanup
+- **Windows**: Run `uninstall.bat` to clean up root runner scripts and delete extracted `lib\php\` while preserving `lib\php.zip`.
+- **Linux / macOS**: Run `./uninstall.sh` to remove root launcher scripts.
 
 ---
 
-## Configuration & Usage
+## Configuration & Document Preloading
 
-- **Adding Documents**: Drop your `.md` and `.txt` files inside the private `/content` directory. They will be auto-scanned and populated in the explorer tree.
+- **Preloading Documents**: Drop any `.md` or `.txt` files directly into the private `/content/` directory (or via the `/public/content` or `/dev/content` directory symlinks).
+- **Subdirectory Placement & Collapsible Tree**: Organize documentation using nested subdirectories inside `/content/` (e.g., `/content/01_Basics/getting_started.md`, `/content/02_Advanced/api_reference.md`). The reader recursively scans all nested folders (`scan_directory_recursive`) and automatically constructs a collapsible folder tree in the GUI explorer sidebar.
 - **Viewing Locally**: Drag/drop files or use the **"Load Local"** command inside the viewer to load off-disk files.
 
 ---
