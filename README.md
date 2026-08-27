@@ -47,6 +47,12 @@ To launch the reader from any terminal window using `md2web` or `md2reader`:
 - **Subdirectory Placement & Collapsible Tree**: Organize documentation using nested subdirectories inside `/content/` (e.g., `/content/01_Basics/getting_started.md`, `/content/02_Advanced/api_reference.md`). The reader recursively scans all nested folders (`scan_directory_recursive`) and automatically constructs a collapsible folder tree in the GUI explorer sidebar.
 - **Viewing Locally**: Drag/drop files or use the **"Load Local"** command inside the viewer to load off-disk files.
 
+## Screenshots
+
+![md2web Reader View Menu](dev/readme-screenshots/mdwebreader-nodoc-viewmenu.png)
+
+![md2web Reader Document View](dev/readme-screenshots/mdwebreader-withdoc-filemenu.png)
+
 ---
 
 # Copyright (c) 2026:
